@@ -5,3 +5,36 @@
 .dark {
    @apply bg-[#171923] text-white
 }
+
+@layer utilities {
+   .no-scrollbar::-webkit-scrollbar {
+     display: none;
+   }
+   .no-scrollbar {
+     -ms-overflow-style: none;
+     scrollbar-width: none; 
+   }
+ }
+ 
+ .Toastify__slide-enter {
+   transform: translateX(100%);
+   opacity: 0;
+ }
+ 
+ .Toastify__slide-enter-active {
+   transform: translateX(0);
+   opacity: 1;
+   transition: all 0.6s ease-in-out; /* Smoother transition timing */
+ }
+ 
+ .Toastify__slide-exit {
+   transform: translateX(0);
+   opacity: 1;
+ }
+ 
+ .Toastify__slide-exit-active {
+   transform: translateX(100%);
+   opacity: 0;
+   transition: all 0.6s ease-in-out;
+ }
+ 

@@ -1,4 +1,4 @@
-import Trending from "../assets/icons/trending.svg";
+import Trending from "../utils/Trending";
 import NewRelease from '../assets/icons/newRelease.svg';
 import ComingSoon from '../assets/icons/commingSoon.svg';
 import Favourite from '../assets/icons/favourite.svg';
@@ -10,15 +10,10 @@ export default function Sidebar() {
             <ul className="space-y-2">
                 <li>
                     <a
-                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-primary text-black"
+                        className="flex items-center space-x-2 px-5 py-3.5 rounded-lg bg-primary dark:bg-[#A3181D] dark:text-white text-black"
                         href="#"
                     >
-                        <img
-                            src={Trending}
-                            width="24"
-                            height="24"
-                            alt="Trending Icon"
-                        />
+                        <Trending/>
                         <span>Trending</span>
                     </a>
                 </li>

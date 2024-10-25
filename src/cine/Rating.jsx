@@ -1,14 +1,21 @@
-import Star from '../assets/star.svg';
+import PropTypes from 'prop-types'
+import RatingStar from '../utils/Star';
 
-export default function Rating() {
-    return (
-        <>
-            {/* Static 5 stars */}
-            <img src={Star} width="14" height="14" alt="star" />
-            <img src={Star} width="14" height="14" alt="star" />
-            <img src={Star} width="14" height="14" alt="star" />
-            <img src={Star} width="14" height="14" alt="star" />
-            <img src={Star} width="14" height="14" alt="star" />
-        </>
-    );
-}
+
+export default function Rating({value}) 
+    {
+        const starts = Array(value).fill(RatingStar);
+        return (
+            <>
+                {
+                    starts.map((star, index) => (
+                        <RatingStar key={index}/>
+                    ))
+                }
+            </>
+        );
+    }
+Rating.propTypes =
+    {
+        value: PropTypes.number,
+    }
